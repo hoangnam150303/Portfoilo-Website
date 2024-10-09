@@ -1,0 +1,253 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f8f8f8;
+    color: #333;
+    line-height: 1.6;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 50px;
+    background-color: #333;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 100;
+}
+
+header .logo {
+    font-size: 2rem;
+    color: #fff;
+    text-decoration: none;
+}
+
+header nav a {
+    margin: 0 15px;
+    font-size: 1rem;
+    color: #fff;
+    text-decoration: none;
+    padding: 5px 10px;
+    transition: 0.3s ease;
+}
+
+header nav a.active,
+header nav a:hover {
+    background-color: #ff6347;
+    border-radius: 5px;
+}
+
+/* Home Section */
+.Home {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: #f2f2f2;
+    padding-top: 80px;
+    position: relative;
+}
+
+.home-img img {
+    width: 300px;
+    height: auto;
+    border-radius: 50%;
+    margin-right: 30px;
+}
+
+.home-content h1 {
+    font-size: 3rem;
+    color: #333;
+}
+
+.home-content h1 span {
+    color: #ff6347;
+}
+
+.typing-text {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+}
+
+.social-icons a {
+    color: #333;
+    font-size: 1.5rem;
+    margin-right: 15px;
+    transition: 0.3s;
+}
+
+.social-icons a:hover {
+    color: #ff6347;
+}
+
+.btn button {
+    padding: 10px 20px;
+    font-size: 1rem;
+    background-color: #ff6347;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn button:hover {
+    background-color: #333;
+}
+
+/* About Section */
+.about {
+    padding: 100px 50px;
+    background-color: #fff;
+    text-align: center;
+}
+
+.about .title {
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+    color: #333;
+}
+
+.about-detail {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.about-detail .left img {
+    width: 300px;
+    height: auto;
+    border-radius: 10px;
+}
+
+.about-detail .right {
+    max-width: 500px;
+}
+
+.topic {
+    font-size: 1.5rem;
+    color: #ff6347;
+    margin-bottom: 15px;
+}
+
+.about-detail p {
+    color: #555;
+    margin-bottom: 30px;
+}
+
+.about .button button {
+    padding: 10px 20px;
+    font-size: 1rem;
+    background-color: #ff6347;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+}
+
+.about .button button:hover {
+    background-color: #333;
+}
+
+/* Skills Section */
+.skills {
+    padding: 100px 50px;
+    background-color: #f8f8f8;
+}
+
+.skills .title {
+    font-size: 2.5rem;
+    margin-bottom: 50px;
+    text-align: center;
+}
+
+.skills-details {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.skills-details .text {
+    flex: 1;
+    margin-right: 30px;
+}
+
+.skills-details .text p {
+    color: #555;
+    margin-bottom: 30px;
+}
+
+.skills-details .experience {
+    font-size: 1.2rem;
+    color: #ff6347;
+}
+
+.skills-details .boxes {
+    flex: 2;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.box {
+    background-color: #fff;
+    padding: 20px;
+    margin: 10px;
+    width: 250px;
+    border-radius: 8px;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.box h4 {
+    color: #333;
+    margin-bottom: 15px;
+}
+
+.topic {
+    color: #555;
+    margin-bottom: 10px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        padding: 20px;
+    }
+
+    .Home {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .home-img {
+        margin-bottom: 30px;
+    }
+
+    .about-detail {
+        flex-direction: column;
+    }
+
+    .skills-details {
+        flex-direction: column;
+    }
+
+    .skills-details .boxes {
+        justify-content: center;
+    }
+
+    .box {
+        width: 100%;
+        max-width: 350px;
+    }
+}
