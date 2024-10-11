@@ -159,45 +159,68 @@ header nav a:hover {
     background-color: #333;
 }
 
-/* Skills Section */
 .skills {
     padding: 100px 50px;
     background-color: #f8f8f8;
 }
 
 .skills .title {
-    font-size: 2.5rem;
-    margin-bottom: 50px;
+    font-size: 20px;
+    margin-bottom: 30px;
     text-align: center;
+    color: #333;
 }
 
+/* Skills Content */
 .skills-details {
     display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 20px;
+    overflow-x: auto;
+    flex-wrap: nowrap;
 }
 
-.skills-details .text {
-    flex: 1;
-    margin-right: 30px;
-}
-
-.skills-details .text p {
-    color: #555;
-    margin-bottom: 30px;
-}
-
-.skills-details .experience {
-    font-size: 1.2rem;
-    color: #ff6347;
-}
-
+/* Skill Boxes */
 .skills-details .boxes {
-    flex: 2;
     display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
+    gap: 20px;
 }
+
+.skills-details .box {
+    background-color: #fff;
+    padding: 20px;
+    margin: 10px;
+    min-width: 200px;
+    /* Ensures all boxes have the same minimum width */
+    border-radius: 8px;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
+    white-space: nowrap;
+    justify-content: center;
+}
+
+.skills-details .box:hover {
+    transform: translateY(-10px);
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.skills-details .box h4 {
+    color: #333;
+    margin-bottom: 15px;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.skills-details .box ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.skills-details .box ul li {
+    margin-bottom: 10px;
+    color: #555;
+}
+
 
 .box {
     background-color: #fff;
@@ -218,36 +241,187 @@ header nav a:hover {
     margin-bottom: 10px;
 }
 
+/* Education Section */
+.education-detail,
+.experience-detail {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.education-detail .left,
+.education-detail .right {
+    flex: 1;
+    padding: 20px;
+}
+
+/* Education Left: Images */
+.education-detail .left img {
+    width: 100%;
+    height: auto;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+}
+
+.education-detail .left img:hover {
+    transform: scale(1.05);
+}
+
+/* Education Right: Text */
+.education-detail .right .topic {
+    font-size: 28px;
+    font-weight: bold;
+    color: #2c3e50;
+    margin-bottom: 15px;
+}
+
+.education-detail .right p {
+    font-size: 16px;
+    line-height: 1.6;
+    color: #666;
+}
+
+/* Experience Section */
+.experience-detail {
+    font-size: 16px;
+    line-height: 1.8;
+    color: #666;
+    text-align: left;
+}
+
+.experience-detail ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.experience-detail ul li {
+    margin: 10px 0;
+}
+
+.experience-detail ul li a {
+    color: #3498db;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.experience-detail ul li a:hover {
+    color: #2980b9;
+}
+
+/* Experience Section */
+.experience {
+    background-color: #f9f9f9;
+    /* Light background for contrast */
+    padding: 100px 50px;
+    /* Padding for top and bottom */
+}
+
+.experience .content {
+    max-width: 1200px;
+    /* Maximum width for the content */
+    margin: 0 auto;
+    /* Center align the content */
+    display: flex;
+    /* Use flexbox for layout */
+    flex-direction: column;
+    /* Column direction for smaller screens */
+}
+
+.experience .title {
+    font-size: 36px;
+    /* Title font size */
+    color: black;
+    /* Title color */
+    text-align: center;
+    /* Center the title */
+    margin-bottom: 50px;
+    /* Margin below title */
+}
+
+.experience-detail {
+    display: flex;
+    /* Use flexbox to align left and right sections */
+    justify-content: space-between;
+    /* Space between left and right */
+    flex-wrap: wrap;
+    /* Wrap items on smaller screens */
+}
+
+.experience-detail .left {
+    flex: 1;
+    /* Take up available space */
+    padding-right: 20px;
+    /* Space to the right for the text */
+}
+
+.experience-detail .right {
+    flex: 1;
+    /* Take up available space */
+}
+
+.experience-detail p {
+    font-size: 16px;
+    /* Paragraph font size */
+    line-height: 1.8;
+    /* Line height for readability */
+    color: #555;
+    /* Text color */
+    margin-bottom: 20px;
+    /* Margin below paragraph */
+}
+
+.experience-detail h4 {
+    font-size: 22px;
+    /* Subheading font size */
+    color: #333;
+    /* Subheading color */
+    margin-bottom: 15px;
+    /* Margin below subheading */
+}
+
+.experience-detail ul {
+    list-style: none;
+    /* Remove default list styles */
+    padding: 0;
+    /* Remove padding */
+}
+
+.experience-detail ul li {
+    margin: 10px 0;
+    /* Margin above and below each list item */
+}
+
+.experience-detail ul li a {
+    font-size: 18px;
+    /* Link font size */
+    color: #ff6347;
+    ;
+    /* Link color */
+    text-decoration: none;
+    /* Remove underline from links */
+    transition: color 0.3s ease;
+    /* Transition effect for hover */
+}
+
+.experience-detail ul li a:hover {
+    color: #2980b9;
+    /* Darker shade on hover */
+}
+
 /* Responsive Design */
 @media (max-width: 768px) {
-    header {
-        flex-direction: column;
-        padding: 20px;
-    }
 
-    .Home {
+    .education-detail,
+    .experience-detail {
         flex-direction: column;
         text-align: center;
     }
 
-    .home-img {
-        margin-bottom: 30px;
-    }
-
-    .about-detail {
-        flex-direction: column;
-    }
-
-    .skills-details {
-        flex-direction: column;
-    }
-
-    .skills-details .boxes {
-        justify-content: center;
-    }
-
-    .box {
-        width: 100%;
-        max-width: 350px;
+    .education-detail .left,
+    .education-detail .right {
+        padding: 10px;
     }
 }
